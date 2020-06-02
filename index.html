@@ -1,5 +1,28 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luan Rodrigues da Silva - Front-end & UI designer</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
 <body>
-<h1>Titulo de teste</h1>
+
+  <div id="app-2">
+    <span v-bind:title="message">
+      Pare o mouse sobre mim e veja a dica interligada dinamicamente!
+    </span>
+  </div>
+
+  
+  <script>
+    var app2 = new Vue({
+      el: '#app-2',
+      data: {
+        message: 'Você carregou esta página em ' + new Date().toLocaleString()
+      }
+  })
+  </script>
+
 </body>
 </html>
